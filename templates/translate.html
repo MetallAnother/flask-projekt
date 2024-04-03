@@ -1,0 +1,22 @@
+{% extends "index.html" %} 
+
+{% block title%}Translate{% endblock %}
+
+{% block body%}
+    <form class="translate" action="">
+        <div>
+            <h1>Text:</h1>
+            <input class="form" name='word' type="text"  >
+        </div>
+        <input class="btn" type="submit" value="Save">
+    </form>
+
+    {%if word%}
+        <p>{{word}} - {{translation}}</p>
+    {% endif %}
+
+
+{% endblock %}
+
+
+

@@ -1,0 +1,27 @@
+{% extends "index.html" %} 
+
+{% block title%}
+Posts
+{% endblock %}
+
+{% block body%}
+    <div class="blog-conteiner">
+        <h1>News</h1>
+
+        {% if articles|length > 0  %}
+
+            {% for el in articles %}
+            <div class="blog">
+                <h2>{{ el.title }}</h2>
+                <p>{{ el.intro }}</p>
+                {% if el.date %}
+                    <p><b>Date: {{ el.date.date() }}</b></p>
+                {% endif %}
+                <a href="/posts/{{ el.id }}" class="btn">More</a>
+            </div>
+            {% endfor %}
+        {% else %}
+        <p>No articles have been added yet</p>
+        {% endif%}
+    </div>
+{% endblock %}

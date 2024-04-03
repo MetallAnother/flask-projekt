@@ -1,0 +1,25 @@
+{% extends "index.html" %} 
+
+{% block title%}
+{{ articles.title }}
+{% endblock %}
+
+{% block body%}
+    <div class="blog-conteiner blog-text-conteiner">
+        <h1>{{ articles.title }}</h1>
+        <div class="blog texts">
+            <p>{{ articles.text }}</p>
+            <div class="blog_cont">
+                {% if articles.date %}
+                    <p><b>Date: {{ articles.date.date() }}</b></p>
+                {% endif %}
+                <div class="but_cont">
+                    <a href="/posts/{{ articles.id }}/delete" class="btn dell_btn">Delete</a>
+                    <a href="/posts/{{ articles.id }}/update" class="btn upd_btn">Update</a>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}

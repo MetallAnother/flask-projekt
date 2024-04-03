@@ -1,0 +1,17 @@
+{% extends "index.html" %} 
+
+{% block title%}
+Blog
+{% endblock %}
+
+{% block body%}
+<div class="forms">
+    <h1>Add New Posts</h1>
+    <form method="post" class="forms">
+        <input type="text" name="title" id="title" class="name form" placeholder="Name"><br>
+        <textarea name="intro" id="intro" class="form text" placeholder="Preview"></textarea><br>
+        <textarea name="text" id="text" class="form text" placeholder="Text"></textarea><br>
+        <input type="submit" class="btn" value="Send">
+    </form>
+    </div>
+{% endblock %}

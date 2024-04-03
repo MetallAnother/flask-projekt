@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home{% block title%}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+    <div class="header">
+        <div class="nav-bar">
+            <img src="/static/Graphic Design Club.jpg" >
+            <div class="but">
+                <a href="/">Home</a>
+                <a href="/translate">Translate</a>
+                <a href="/create-article">Create Blog</a>
+                <a href="/posts">Blog</a>
+            </div>
+        </div>
+    </div>
+    {% block body%}{% endblock %}
+    
+</body>
+</html>
+
+
